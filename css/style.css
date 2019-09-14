@@ -1,0 +1,242 @@
+@font-face{
+  src: url(../fonts/Rajdhani-Medium.ttf);
+  font-family: Raj;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Raj;
+}
+
+ul{
+  list-style: none;
+}
+
+.navbar{
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 3;
+}
+
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.navbar .nav-item.active {
+  border-left: #444 3px solid;
+}
+
+.focceph-logo{
+  width: 80px;
+  height:80px;
+  border-radius: 50%;
+}
+
+.carousel-caption, .carousel-indicators{
+  z-index: 2;
+}
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-image-1 {
+  background: url('../img/hands.jpeg');
+  background-size: cover;
+}
+
+.carousel-image-2 {
+  background: url('../img/carousel-kid2.jpg');
+  background-size: cover;
+  background-position-y: 40%;
+}
+
+.carousel-image-3 {
+  background: url('../img/carouselkid3.jpg');
+  background-size: cover;
+  background-position-y: 30%;
+}
+
+#kid-home-overlay {
+  height: 200px;
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/Ecole-haiti8-660x330.jpg') no-repeat center center/cover fixed;
+  text-align: center;
+  color: #fff;
+}
+
+.kid-header{
+  padding-top: 3rem;
+}
+
+.kid-dance{
+  border-radius: 50%;
+}
+
+#video-play {
+  position: relative;
+  height: 200px;
+  background: url('../img/carousel-kid2.jpg') center/cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #fff;
+}
+
+#video-play a {
+  color: #fff;
+}
+
+/* contacter */
+.contact-container{
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  position: relative;
+}
+
+.contact-container i{
+  position: absolute;
+  top: -4px;
+  margin-left: 0.5rem;
+  
+}
+
+/* Qui nous sommes */
+#page-header {
+  height: 300px;
+  background:
+  linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+   url('/img/carousel-kid1.jpg');
+  background-attachment: fixed;
+  color: #fff;
+  border-bottom: 1px #eee solid;
+  padding-top: 50px;
+}
+
+.inner-header{
+  margin-top: 5rem;
+}
+
+.about-img {
+  margin-top: -50px;
+}
+
+#faq .card {
+  border: #444;
+}
+
+#faq a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#faq .card-body,
+#faq .card-header {
+  background: #333;
+}
+
+/* paj nous aider */
+.header-flex{
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-flex h1 {
+  padding-right: 1rem;
+}
+
+.header-flex img{
+  width: 80px;
+}
+
+.box{
+  border: 1px solid #333;
+  margin: 1rem;
+  border-radius: 10px;
+  padding-top: 1rem; 
+}
+
+.brand-container{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-container img{
+  width: 80px;
+  padding-left: 1rem;
+}
+
+.donate-box{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#main-footer {
+  background: #000;
+  color: #fff;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+}
+
+#main-footer a{
+  color: #fff;
+  transition: color 0.4s;
+  padding: 1rem;
+}
+
+#main-footer #facebook:hover{
+    color: rgb(102, 152, 231);
+}
+
+#main-footer #youtube:hover{
+    color: rgb(238, 92, 82);
+}
+
+@media(max-width : 500px){
+  .text-home{
+  border-bottom: 1px solid rgb(3, 153, 60);
+  }
+  #page-header{
+    height: 200px;
+  }
+    #kid-home-overlay{
+    height: 120px;
+  }
+
+  .overlay-text{
+    display: none;
+  }
+
+  #video-play{
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+  }
+
+  .header-flex h1{
+    font-size: 1rem;
+  }
+
+  .header-flex img{
+    width: 50px;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <title>FOCCEPH</title>
+</head>
+<body>
+    <nav class="fixed-top navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+         <a href="index.html" class="navbar-brand">
+           <img class="focceph-logo" src="./img/focceph-logo.png" alt="">
+         </a>
+         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarCollapse">
+           <ul class="navbar-nav ml-auto">
+             <li class="nav-item">
+               <a href="index.html" class="nav-link">Acceuil</a>
+             </li>
+             <li class="nav-item">
+               <a href="QuiNousSommes.html" class="nav-link">Qui Nous Sommes</a>
+             </li>
+             <li class="nav-item active">
+               <a href="agenda.html" class="nav-link">Agenda</a>
+             </li>
+             <li class="nav-item">
+               <a href="activite.html" class="nav-link">Activité</a>
+             </li>
+             <li class="nav-item">
+               <a href="contact.html" class="nav-link">Nous Contactez</a>
+             </li>
+             <li class="nav-item">
+                 <a class="btn btn-success" href="donate.html" class="nav-link">Nous Aider</a>
+             </li>
+             <!-- <li class="nav-item">
+               <a href="https://paypal.me/foce993?locale.x=fr_FR" class="btn btn-success nav-link text-white">Donate</a>
+            </li> -->
+           </ul>
+         </div>
+       </div>
+     </nav>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- FOOTER -->
+ <footer id="main-footer" class="text-center p-4">
+    <div class="container">
+      <div>
+       <ul class="social">
+          <li><a class=" text-center" id="facebook" href="https://web.facebook.com/fondationfocceph" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+          <li><a class=" text-center" id="youtube" href="https://www.youtube.com/godsoncermot" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a></li>
+       </ul>
+    </div>
+      <div class="row">
+        <div class="col">
+          <p>Copyright &copy;
+            <span id="year"></span> Fondation de la communauté chrétienne des églises protestantes D’Haïti.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="./JS/jquery-3.4.1.min.js"></script>
+    <script src="./JS/popper.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+  <script>
+    //ane actuel avec Jquery
+    $('#year').text(new Date().getFullYear());
+
+    // Configire Slider 
+    $('.carousel').carousel({
+      interval: 6000,
+      pause: 'hover'
+    });
+
+    // Lightbox Init
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+
+    // Video 
+    $(function () {
+      // model pou jwe video a automatic
+      $(".video").click(function () {
+        var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSRCauto);
+        $(theModal + ' button.close').click(function () {
+          $(theModal + ' iframe').attr('src', videoSRC);
+        });
+      });
+    });
+
+  </script>
+  </body>
+  </html>
